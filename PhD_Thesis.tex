@@ -1,0 +1,109 @@
+% ------------------------------------------------------------------------
+% Title: Template for LMPS-themed thesis (main file)
+% Authors:
+%   - Flavien Loiseau (flavien.loiseau@ens-paris-saclay.fr),
+%   - Alexandre Daby-Seesaram (alexandre.daby-seesaram@ens-paris-saclay.fr)
+% Last update: 21/12/2023
+% ------------------------------------------------------------------------
+
+
+\documentclass[12pt,a4paper,openright,tikz]{lmpsthesis}
+
+%%% To remove
+\usepackage{lipsum}
+
+%%% Setup metadata
+\hypersetup{
+    pdftitle={TODO},
+    pdfsubject={Ph.D. Thesis},
+    pdfauthor={TODO},
+    pdfkeywords={TODO}
+}
+
+%%% Input files
+% Bibliography
+\addbibresource{biblio.bib}
+% Notations
+\input{notations}
+
+%%% User packages
+% Cleverref for easier references
+\usepackage[nameinlink,noabbrev,capitalise]{cleveref}
+% Remarks
+\usepackage{amsthm}
+\usepackage[most]{tcolorbox}
+\tcbset{shield externalize} % Prevent tikz from externalizing tcolorbox
+% Fontawesome for icons
+\usepackage{fontawesome5}
+
+%%% User environments
+% Remark
+\newtheorem{myremark}{\color{accentcolor} {\footnotesize\reflectbox{\faComment[regular]}}~~Remark}[chapter]
+\newtcolorbox{myremarkbox}{breakable,colback=accentcolor!5,boxrule=0pt,frame hidden,enhanced,borderline west={3pt}{0pt}{accentcolor}}
+\newenvironment{remark}{%
+    \begin{myremarkbox}
+    \begin{myremark}
+    }{%
+    \end{myremark}
+    \end{myremarkbox}
+}
+% Chapter summary
+\newenvironment{chaptersummary}{%
+    \section*{\faPenNib~~Summary of the Chapter}%
+    \label{sec:summary_{\thechapter}}
+    \stepcounter{section}
+    \addcontentsline{toc}{section}{\protect\numberline{\thesection}Summary of the Chapter}
+}{}
+
+%%% User modifications
+% Change default positioning arguments for floats (figures, tables, ...)
+\makeatletter% because def contain @
+    \def\fps@figure{hbpt!}
+    \def\fps@table{hbpt!}
+\makeatother
+
+\begin{document}
+
+%%% Frontmatter
+\frontmatter
+% University titlepage
+\includepdf[pages=-]{pdfs/titlepage.pdf}    % Include the title page
+\setcounter{page}{1}                        % Reset the page counter
+% Frontmatter
+\input{chapters/frontmatter}
+
+%%% Main matter
+\mainmatter
+
+% Introduction
+\input{chapters/introduction.tex}
+\clearpage\null
+
+% Part I (can be removed)
+\part{My first part title}
+
+\input{chapters/1_mechanical_degradation_of_quasi-brittle_materials.tex}
+\clearpage\null
+
+% Part II (can be removed)
+\part{My second part title}
+
+% Conclusion
+\input{chapters/conclusion.tex}
+\clearpage\null
+
+% Appendices
+\thesisappendix
+
+\input{chapters/appendices/my_first_appendix.tex}
+\clearpage\null
+
+%%% Backmatter
+\backmatter
+% Display the bibliography
+\defbibheading{bibintoc}{\addcontentsline{toc}{part}{\bibname}}
+\chapter*{\bibname}
+\printbibliography[heading=bibintoc]
+
+\end{document}
+

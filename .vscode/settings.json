@@ -1,0 +1,20 @@
+{
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "PhDThesis",
+            "tools": [
+                "PhDThesis",
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "PhDThesis",
+            "command": "make",
+            "args": [
+                "titlepage",
+                "main"
+            ]
+        }
+    ]
+}

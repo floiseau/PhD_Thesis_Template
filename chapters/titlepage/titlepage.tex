@@ -1,0 +1,235 @@
+%%%% Modèle proposé par kira.ribeiro@universite-paris-saclay.fr  %%%%
+%%%% màj : 27/01/2023 %%%%
+
+\documentclass[french,12pt,a4paper]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage[default,oldstyle, scale=.95]{opensans} % police Open Sans
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{caption}
+\captionsetup[figure]{font=small,labelfont=small}
+\usepackage{xcolor} % où color selon l'installation
+\definecolor{Prune}{RGB}{99,0,60} % l14-33 : couleurs de la charte graphique upsaclay
+\definecolor{B1}{RGB}{49,62,72} 
+\definecolor{C1}{RGB}{124,135,143}
+\definecolor{D1}{RGB}{213,218,223}
+\definecolor{A2}{RGB}{198,11,70}
+\definecolor{B2}{RGB}{237,20,91}
+\definecolor{C2}{RGB}{238,52,35}
+\definecolor{D2}{RGB}{243,115,32}
+\definecolor{A3}{RGB}{124,42,144}
+\definecolor{B3}{RGB}{125,106,175}
+\definecolor{C3}{RGB}{198,103,29}
+\definecolor{D3}{RGB}{254,188,24}
+\definecolor{A4}{RGB}{0,78,125}
+\definecolor{B4}{RGB}{14,135,201}
+\definecolor{C4}{RGB}{0,148,181}
+\definecolor{D4}{RGB}{70,195,210}
+\definecolor{A5}{RGB}{0,128,122}
+\definecolor{B5}{RGB}{64,183,105}
+\definecolor{C5}{RGB}{140,198,62}
+\definecolor{D5}{RGB}{213,223,61}
+\usepackage{mdframed}
+\usepackage{multirow} %% Pour mettre un texte sur plusieurs rangées
+\usepackage{multicol} %% Pour mettre un texte sur plusieurs colonnes
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage[absolute]{textpos} 
+\usepackage{colortbl}
+\usepackage{array}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\hypersetup{ % paramétrage couleur des liens hypertextes, toujours garder colorlinks=true
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=A5}
+
+\renewcommand{\FrenchLabelItem}{\textbullet}
+
+\pagestyle{plain} % pour ne garder que les n°de page en milieu-bas et supprimer les indications de chapitre en marge haute
+
+\usepackage{lipsum} % à retirer!!!
+\begin{document}
+
+\begin{titlepage}
+
+%\thispagestyle{empty}
+
+\newgeometry{left=6cm,bottom=2cm, top=1cm, right=1cm}
+
+\tikz[remember picture,overlay] \node[opacity=1,inner sep=0pt] at (-13mm,-135mm){\includegraphics{Frame-ups.pdf}};
+
+%*****************************************************
+%******** NUMÉRO D'ORDRE DE LA THÈSE À COMPLÉTER *****
+%******** POUR LE SECOND DÉPOT                   *****
+%*****************************************************
+
+\color{white}
+
+\begin{picture}(0,0)
+\put(-152,-743){\rotatebox{90}{\Large \textsc{THESE DE DOCTORAT}}} \\
+\put(-120,-743){\rotatebox{90}{NNT : 2020UPASA001}}
+\end{picture}
+ 
+%*****************************************************
+%**  LOGO  ÉTABLISSEMENT PARTENAIRE SI COTUTELLE
+%**  CHANGER L'IMAGE PAR DÉFAUT **
+%*****************************************************
+\vspace{-14mm} % à ajuster en fonction de la hauteur du logo
+\flushright \includegraphics[scale=1]{logo2.png}
+
+%*****************************************************
+%******************** TITRE **************************
+%*****************************************************
+
+\flushright
+\vspace{10mm} % à régler éventuellement
+\color{Prune}
+
+\fontsize{22}{26}\selectfont
+    \Huge Name of the thesis (on multiple line if necessary) \\
+
+\normalsize
+\color{black}
+    \Large{\textit{Translation of the thesis title (on multiple lines if necessary)}} \\
+%*****************************************************
+
+
+\fontsize{8}{12}\selectfont
+
+\vspace{1.5cm}
+
+\normalsize
+\textbf{Thèse de doctorat de l'université Paris-Saclay} \\
+
+\vspace{6mm}
+
+\small École doctorale n$^{\circ}$ d'accréditation, dénomination et sigle\\
+\small Spécialité de doctorat: voir annexe\\
+\small Graduate School : voir annexe. Référent : voir annexe \\
+\vspace{6mm}
+
+\footnotesize Thèse préparée dans la (ou les) unité(s) de recherche \textbf{Nom(s)} (voir annexe), sous la direction de \textbf{Prénom NOM}, titre du directeur ou de la directrice de thèse, la co-direction de \textbf{Prénom NOM}, titre du co-directeur ou de la co-directrice de thèse, le co-encadrement de \textbf{Prénom NOM}, titre, du co-encadrant ou de la co-encadrante ou la co-supervision de \textbf{Prénom NOM}, titre, du tuteur ou de la tutrice (en cas de partenariat industriel) \\
+\vspace{15mm}
+
+\textbf{Thèse soutenue à Paris-Saclay, le JJ mois AAAA, par}\\
+\bigskip
+\Large {\color{Prune} \textbf{Prénom NOM}} % Changer le Prénom et le NOM
+
+%************************************
+\vspace{\fill} % ALIGNER LE TABLEAU EN BAS DE PAGE
+%************************************
+
+\bigskip
+
+\flushleft
+\small {\color{Prune} \textbf{Composition du jury}}\\
+{\color{Prune} \scriptsize {Membres du jury avec voix délibérative}} \\
+\vspace{2mm}
+\scriptsize
+\begin{tabular}{|p{7cm}l}
+\arrayrulecolor{Prune}
+\textbf{Prénom NOM} &   Président ou Présidente\\
+Titre, Affiliation & \\
+\textbf{Prénom NOM} &  Rapporteur \& Examinateur / trice \\
+Titre, Affiliation   &   \\
+\textbf{Prénom NOM} &  Rapporteur \& Examinateur / trice \\
+Titre, Affiliation  &   \\
+\textbf{Prénom NOM} &  Examinateur ou Examinatrice \\
+Titre, Affiliation   &   \\
+\textbf{Prénom NOM} &  Examinateur ou Examinatrice \\
+Titre, Affiliation   &   \\
+\end{tabular} 
+
+\end{titlepage}
+
+% Skip a page
+\newpage
+\ 
+\newpage
+
+% page des résumés à garder en 2ème page. Si les résumés sont trop longs pour tenir sur une seule et même page, on peut mettre un résumé par page
+\thispagestyle{empty}
+\newgeometry{top=1.5cm, bottom=1.25cm, left=2cm, right=2cm}
+
+
+\noindent 
+%*****************************************************
+%***** LOGO DE L'ED À CHANGER IMPÉRATIVEMENT *********
+%*****************************************************
+\includegraphics[height=2.45cm]{logo_ups_SMEMAG.png}
+\vspace{1cm}
+%*****************************************************
+
+\small
+
+\begin{mdframed}[linecolor=Prune,linewidth=1]
+
+\textbf{Titre:} Titre en français
+
+    \noindent \textbf{Mots clés:} 3 à 6 mots clefs (version en français)
+
+\vspace{-.5cm}
+\begin{multicols}{2}
+\noindent \textbf{Résumé:} \lipsum[1-2]
+\end{multicols}
+\end{mdframed}
+
+\newpage
+\thispagestyle{empty}
+\ 
+
+\newpage
+\thispagestyle{empty}
+\ 
+
+\noindent 
+%*****************************************************
+%***** LOGO DE L'ED À CHANGER IMPÉRATIVEMENT *********
+%*****************************************************
+\includegraphics[height=2.45cm]{logo_ups_SMEMAG.png}
+\vspace{1cm}
+%*****************************************************
+
+\small
+
+\begin{mdframed}[linecolor=Prune,linewidth=1]
+
+    \textbf{Title:} Titre (en anglais)
+
+    \noindent \textbf{Keywords:} 3 à 6 mots clefs (version en anglais).
+
+\begin{multicols}{2}
+\noindent \textbf{Abstract:} \lipsum[1-2]
+\end{multicols}
+\end{mdframed}
+
+\titleformat{\chapter}[hang]{\bfseries\Large\color{Prune}}{\thechapter\ -}{.1ex}
+{\vspace{0.1ex}
+}
+[\vspace{1ex}]
+\titlespacing{\chapter}{0pc}{0ex}{0.5pc}
+
+\titleformat{\section}[hang]{\bfseries\normalsize}{\thesection\ .}{0.5pt}
+{\vspace{0.1ex}
+}
+[\vspace{0.1ex}]
+\titlespacing{\section}{1.5pc}{4ex plus .1ex minus .2ex}{.8pc}
+
+\titleformat{\subsection}[hang]{\bfseries\small}{\thesubsection\ .}{1pt}
+{\vspace{0.1ex}
+}
+[\vspace{0.1ex}]
+\titlespacing{\subsection}{3pc}{2ex plus .1ex minus .2ex}{.1pc}
+
+% Skip another page
+\newpage
+\thispagestyle{empty}
+\ 
+\newpage
+
+\end{document}

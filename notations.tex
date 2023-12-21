@@ -1,0 +1,111 @@
+%%% Packages for notations
+\usepackage{amsmath}
+\usepackage{upgreek}
+
+%%% Notations not in the table
+% Slanted leq and geq 
+\let\leq=\leqslant
+\let\geq=\geqslant
+
+%%% Spaces
+% Real space
+\newcommand{\RR}{\mathbb{R}}
+% Orthogonal group
+\newcommand{\OO}{\mathrm{O}}
+% Cyclic group
+\newcommand{\ZZ}{\mathbb{Z}}
+% Dihedral group
+\newcommand{\DD}{\mathbb{D}}
+
+%%% Operators
+% Deviatoric part
+\newcommand{\dev}[1]{#1'}
+
+%%% Constants
+% Zeros
+\newcommand{\zero}{\mathbf{0}}
+% Identities
+\newcommand{\id}[1]{%
+\ifnum2=#1\relax
+  \mathbf{1}
+\else
+  \ifnum4=#1\relax
+    \mathbf{I}
+  \else
+    \textcolor{red}{\text{ERROR}}
+  \fi
+\fi}
+% Deviatoric projector
+\newcommand{\J}{\mathbf{J}}
+
+%%% Continuous model
+% Damage
+\newcommand{\dam}{\mathbf{D}}
+% Elasticity tensor
+\newcommand{\ela}{\mathbf{E}}
+% Effective elasticity tensor
+\newcommand{\elaeff}{\tilde{\mathbf{E}}}
+
+%%% Harmonic decomposition
+% Dilatation tensor
+\newcommand{\dil}{\mathbf{d}}
+% Harmonic part
+\newcommand{\har}{\mathbf{H}}
+
+%%% List of Symbols
+\newcommand{\listofnotations}{
+    \chapter*{List of Symbols}%
+    \label{cha:list_of_symbols}
+
+        \subsection*{Spaces}%
+        \label{sec:Spaces}
+        \vspace{-1em}
+        \begin{longtable}{p{0.1\textwidth} p{0.85\textwidth}}
+            \( \RR \)               & Real space                                                                            \\[0.5em]
+            \( \ZZ_{n}  \)          & Cyclic group of order $n$                                                             \\[0.5em]
+            \( \DD_{n}  \)          & Dihedral group of order $2n$ (group of $n$-gon symmetries)                            \\[0.5em]
+            \( \OO(n) \)            & Orthogonal group of dimension $d$                                                     \\[0.5em]
+        \end{longtable}
+        \vspace{-2em}
+
+        \subsection*{Operators}%
+        \label{sec:Operators}
+        \vspace{-1em}
+        \begin{longtable}{p{0.1\textwidth} p{0.85\textwidth}}
+            \( \dev{\bullet} \)     & Deviatoric part of second-order tensor $\bullet$                                      \\[0.5em]
+            \( \otimes \)           & Tensor product                                                                        \\[0.5em]
+        \end{longtable}
+        \vspace{-3em}
+
+        \subsection*{Constants}%
+        \label{sec:Constants}
+        \vspace{-1em}
+        \begin{longtable}{p{0.1\textwidth} p{0.85\textwidth}}
+            \( \zero \)             & Null tensor                                                                           \\[0.5em]
+            \( \id{2} \)            & Second-order identity tensor                                                          \\[0.5em]
+            \( \id{4} \)            & Fourth-order identity tensor                                                          \\[0.5em]
+            \( \J \)                & Deviatoric projector (4th-order tensor)                                               \\[0.5em]
+        \end{longtable}
+        \vspace{-2em}
+
+        \subsection*{Continuous variables}%
+        \label{sec:Continuous variables}
+        \vspace{-1em}
+        \begin{longtable}{p{0.1\textwidth} p{0.85\textwidth}}
+            \( \dam \)              & Damage tensor                                                                         \\[0.5em]
+            \( \ela \)              & Elasticity tensor                                                                     \\[0.5em]
+            \( \ela_0 \)            & Initial elasticity tensor                                                             \\[0.5em]
+            \( \elaeff(\dam) \)     & Effective elasticity tensor                                                           \\[0.5em]
+        \end{longtable}
+        \vspace{-2em}
+
+        \subsection*{Harmonic decomposition}
+        \label{sec:hamronic_decomposition}
+        \vspace{-1em}
+        \begin{longtable}{p{0.1\textwidth} p{0.85\textwidth}}
+            \( \mu \)               & Shear modulus                                                                         \\[0.5em]
+            \( \kappa \)            & Bulk modulus                                                                          \\[0.5em]
+            \( \dil \)              & Dilatation tensor                                                                     \\[0.5em]
+            \( \har \)              & Harmonic part                                                                         \\[0.5em]
+        \end{longtable}
+}

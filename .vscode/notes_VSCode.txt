@@ -1,3 +1,0 @@
-- Ouvrir VSCode
-- Installer l'extension LaTeX Workshop (et aussi Latex Snippets si vous le souhaitez)
-- Utiliser le fichier dans .vscode/settings.json

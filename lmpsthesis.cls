@@ -10,7 +10,7 @@
 % Class %
 %-------%
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{lmpsthesis}[2023/12/16 Class for PhD Thesis at LMPS]
+\ProvidesClass{lmpsthesis}[16/12/2023 Class for PhD Thesis at LMPS]
 
 %---------%
 % Options %

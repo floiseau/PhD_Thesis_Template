@@ -88,6 +88,8 @@ The different features of this documents listed below.
 The file structure of the template is the following.
 ```
 ├── .latexmkrc
+├── .vscode/
+│   └── settings.json
 ├── biblio.bib
 ├── build
 │   ├── PhD_Thesis.aux
@@ -102,8 +104,8 @@ The file structure of the template is the following.
 │       ├── logo2.PNG
 │       ├── Logo_ups.png
 │       ├── logo_ups_SMEMAG.png
-│       ├── Modele_These_UParisSaclay_2022.tex
-│       └── Official_Template_PhD_Universit__Paris_Saclay.pdf
+│       ├── Official_Template_PhD_Universit__Paris_Saclay.pdf
+│       └── titlepage.tex
 ├── custom-apa.bbx
 ├── figures
 │   └── figure.pdf
@@ -117,7 +119,8 @@ The file structure of the template is the following.
 └── README.md
 ```
 The different files are listed below.
-- `PhD_Thesis.tex` is the main file. It contains the preamble of the document and inputs the title page and the chapters.
+- `PhD_Thesis.tex` is the main file. It contains the user preamble and inputs the title page, the chapters ...
+- `lmpsthesis.cls` is the class file for the `lmpsthesis` custom class. It contains most of the default package and styling in the document.
 - `.latexmkrc` is a configuration file for `latexmk` (which is used to compile the document).
 - `biblio.bib` contains the bibliography in the `biblatex` format.
 - `build` directory contains all files generated during the compilation of the document.
@@ -139,6 +142,15 @@ The title page is stored in the file [Modele_These_UParisSaclay_2022.tex](chapte
 
 **The titlepage is often updated by the University. You must use the up to date version available on the official website.**
 
+## Options of the lmpsthesis class
+The `lmpsthesis` document class has different options:
+- `french`: Load babel package with the french options.
+- `emptypage`: Make the pages with no content empty (remove headers, footers, page numbers).
+- `tikz`: Load Tikz and PGFPlots. It also enables externalization. It is highly recommended naming each `tikzpicture` using the command `\tikzsetnextfilename` (avoid recompiling all tikzpictures when adding new tikzpicture before existing ones). Note that this option is activated in the default `PhD_Thesis.tex` file and should be disabled if you don't want to use Tikz or PGFPlots.
+- All others options are passed to the book document class.
+
+To use those options, you must specify them in the document class command `\documentclass[12pt,a4paper,openright,...]{lmpsthesis}` at the beginning of `PhD_Thesis.tex`.
+
 ## Styling of the document
 
 ### Font
@@ -147,7 +159,7 @@ The font is the `utopia` font.
 ### Headers and footers
 The header are footer are set with the package `fancyhdr`.
 The left page headers contain the chapter name and the right page headers contain the section name.
-The page number are set in the footer in the exterior side of the page.
+The page numbers are set in the footer in the exterior side of the page.
 
 ### Captions
 For the caption, we use the package `caption`.
@@ -163,7 +175,7 @@ by
 ```
 Another interesting option is the `hang` option that can be activated like that
 ```TeX
-\usepackage[hang,labelfont=bf]{caption}
+\RequirePackage[hang,labelfont=bf]{caption}
 ```
 
 ## Bibliography

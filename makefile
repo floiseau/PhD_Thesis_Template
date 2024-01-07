@@ -1,11 +1,11 @@
-.PHONY: pdfs/PhD_thesis.pdf pdfs/titlepage.pdf
+.PHONY: main titlepage
 
-pdfs/PhD_thesis.pdf: pdfs/titlepage.pdf chapters/*.tex
+main:
 	mkdir -p build/build
 	latexmk --shell-escape -logfilewarnings -pdf --output-directory=build PhD_Thesis.tex
 	cp build/PhD_Thesis.pdf pdfs/
 
-pdfs/titlepage.pdf: chapters/titlepage/titlepage.tex
+titlepage:
 	cd chapters/titlepage && latexmk --shell-escape -pdf --output-directory=../../build titlepage.tex
 	cp build/titlepage.pdf pdfs/titlepage.pdf
 

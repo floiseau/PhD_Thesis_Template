@@ -19,6 +19,10 @@ Then, the document is compiled using the
 $ make main
 ```
 The resulting documents is stored in [pdfs/PhD_thesis.pdf](pdfs/PhD_thesis.pdf).
+Both the titlepage and the thesis can be compiled in one go using the command
+```shell
+$ make titlepage main
+```
 
 ### From VSCode
 To use the template with VSCode, the extension [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) must be installed.

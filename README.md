@@ -37,7 +37,7 @@ The settings for the compilation are stored in the file [.vscode/settings.json](
 It is possible to create a button in TeXstudio to compile the document.
 Here are the different steps:
 - In the top menus go to "Options" --> "Configure TeXstudio ..."
-- Go to the "Production" tab
+- Go to the "Build" tab
 - Enter the following command in "User compilations".
     - Command name (first box): `CompilePhD:CompilePhD` (you can put whatever you want)
     - Command (second box): `make titlepage main | txs:///view-pdf-internal --embedded pdfs/PhD_Thesis.pdf`

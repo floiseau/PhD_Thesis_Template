@@ -219,7 +219,7 @@
 \RequirePackage{minitoc}
 % \nomtcrule                                                                         % FLAVOR Remove minitoc rules
 % \mtcsetformat{minitoc}{dotinterval}{2}
-\renewcommand{\mtctitle}{\textcolor{accentcolor}{Contents}}                        % Add color to minitoc title
+% \renewcommand{\mtctitle}{\textcolor{accentcolor}{Contents}}                      % Add color to minitoc title (WARNING: might pro
 \renewcommand{\mtcfont}{\small\rmfamily\upshape\mdseries\color{accentcolor!80}}    % Change color of    section in minitoc
 \renewcommand{\mtcSfont}{\small\rmfamily\upshape\bfseries\color{accentcolor!80}}   % Change color of subsection in minitoc
 \dominitoc

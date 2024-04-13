@@ -4,9 +4,8 @@ This is a template for a PhD thesis with a separate title page.
 This template aims at setting up all the necessary packages and create the base outline of a thesis.
 
 ## How to compile
-**In its current state, this template will probably not work on Windows.**
-
 To use the template, a LaTeX distribution must be installed on your system.
+When using TexLive, a version more recent that TexLive2019 is required.
 
 ### From command line
 A `makefile` is provided to use this template.
@@ -23,6 +22,7 @@ Both the titlepage and the thesis can be compiled in one go using the command
 ```shell
 $ make titlepage main
 ```
+
 
 ### From VSCode
 To use the template with VSCode, the extension [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) must be installed.
@@ -191,23 +191,12 @@ To avoid any issues, it is recommended to export the bibliography from Zotero wi
 - `Unicode (utf-8)` encoding.
 
 ## Notations
-For the notation, the package `nomencl` is used (for more information, see this [Overleaf guide](https://www.overleaf.com/learn/latex/Nomenclatures)).
-For each new notation command, it is recommended to define a nomenclature entry.
-```TeX
-% Strain
-\newcommand{\eps}{\boldsymbol{\varepsilon}}
-\nomenclature[S]{\(\eps\)}{Strain tensor}
-```
-Note that the notations can be groups (here the strain is in the group `S`).
-The group are defined using the following command.
-```TeX
-\renewcommand\nomgroup[1]{%
-  \item[\bfseries
-  \ifstrequal{#1}{S}{State and associated variables}{%
-  \ifstrequal{#1}{C}{Constant tensors}}{}%
-]}
-```
-Here, `S` corresponds to the "State and associated variables".
+The notations file (`notations.tex`) is split into two parts:
+- the definition of new commands for notations,
+- the definition of the command `\listofnotations`, which is composed of different long tables containing the notations and separated into different subsections. Other informations (*e.g.*, units, abbreviations, etc.) can easily be introduced by adding new columns to the tables.
+The command `\listofnotations` is called is the frontmatter file (`chapters/frontmatter.tex`).
+I recommand to fill the notation table while defining the command.
+
 
 ## Tikz externalization
 It should be working out-of-the-box.
@@ -218,3 +207,17 @@ To avoid this, you can set the name of each figure manually using the following 
 \tikzsetnextfilename{name_of_the_figure}
 ```
 Other tips can be found here: [https://tex.stackexchange.com/a/57738](https://tex.stackexchange.com/a/57738).
+
+## Use in french
+In the case you want to use the template in french, you can activate the babel options `french`.
+
+To change the different sections/chapters names that are defined in the template:
+
+- "List of Symbols" in `notations.tex` (definition of the command `\listnotationsname`),
+- "Acknowledgements" in `frontmatter.tex`,
+- (optional) "Chapter summary" in `PhD_Thesis.tex`.
+
+### Known issues in french
+- When using `babel` with the `french` option, the label names *must not* contains colon ":".
+
+

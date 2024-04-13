@@ -251,7 +251,7 @@
 % Appendix
 \newcommand{\thesisappendix}{
     \appendix
-    \part*{Appendices}
+    \part*{\appendixname}
     \renewcommand\chaptername{Appendix}
     \renewcommand{\thechapter}{\Alph{chapter}}
 }

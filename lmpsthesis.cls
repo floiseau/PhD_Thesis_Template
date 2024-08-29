@@ -161,6 +161,8 @@
 
 %%% Title styles
 \RequirePackage{titlesec}
+% Numbering
+ \setcounter{secnumdepth}{3} 
 % Part style
 \makeatletter
 \titleformat{\part}[display]

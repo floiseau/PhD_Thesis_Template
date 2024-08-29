@@ -178,6 +178,8 @@
   % {\colorbox{accentcolor!10}{\parbox[c][\bandh]{\linewidth+1in}{\raisebox{+0.072em}[\bandh][+0.072em]{\hspace{0em}\textcolor{accentcolor}{{\normalfont\Large\chaptername}~~\scalebox{4}{\usefont{OT1}{ptm}{m}{n}\selectfont\thechapter}}}}}} % FLAVOR - With "chapter" in title and number in PTM font
   {1em}
   {\normalfont\huge\textcolor{accentcolor}}
+% Unnumbered chapter style
+% \titleformat{name=\chapter,numberless}[display]{\centering\huge\vspace{-5em}}{}{1em}{\normalfont\huge\textcolor{accentcolor}} % FLAVOR Center numberless chapters
 % Section style
 \renewcommand{\thesection}{\arabic{section}} % Remove chapter number in section numbers
 \titleformat{\section}

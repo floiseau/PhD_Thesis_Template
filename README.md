@@ -82,11 +82,40 @@ If for any reasons, the temporary and cache files become you can delete the enti
 
 ## Features
 The different features of this documents listed below.
+
+- Flavors
 - Organisation of the file;
 - Styling of the document;
 - Styling of the bibliography;
 - Notation file;
 - Tikz externalization
+
+# Flavors
+
+You can customize the template by enabling or disabling various options in `lmpsthesis.cls`.
+All customizations are marked with the keyword `FLAVOR`, making them easy to find by searching for this term within the file.
+
+The available customizations include:
+
+- Accent color: Modify the color used for accents throughout the document.
+- Chapter title number font: Change the font style used for the numbers in chapter titles.
+- Centering of numberless chapter titles: Control whether chapter titles without numbers are centered or aligned differently.
+- Minitoc rules: Enable or disable rules (horizontal lines) around mini tables of contents.
+
+If you have suggestions for additional customizations or improvements, they might be added as a new flavor or even become part of the default style.
+
+## Flavors
+
+Different options can enabled/disabled by commenting/uncommenting lines in `lmpsthesis.cls`.
+All the flavors are tagged and can easily be found by searching the keyword `FLAVOR` in `lmpsthesis.cls`.
+The availables changes are:
+
+- the accent color,
+- the font of the chapter title number,
+- the centering of numberless chapter title,
+- the activation of the minitoc rules.
+
+If you have any suggestions/enhancement, it may be added to the template as a flavor (or as the default style).
 
 ## Organisation of the files
 The file structure of the template is the following.

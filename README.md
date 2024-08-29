@@ -104,19 +104,6 @@ The available customizations include:
 
 If you have suggestions for additional customizations or improvements, they might be added as a new flavor or even become part of the default style.
 
-## Flavors
-
-Different options can enabled/disabled by commenting/uncommenting lines in `lmpsthesis.cls`.
-All the flavors are tagged and can easily be found by searching the keyword `FLAVOR` in `lmpsthesis.cls`.
-The availables changes are:
-
-- the accent color,
-- the font of the chapter title number,
-- the centering of numberless chapter title,
-- the activation of the minitoc rules.
-
-If you have any suggestions/enhancement, it may be added to the template as a flavor (or as the default style).
-
 ## Organisation of the files
 The file structure of the template is the following.
 ```

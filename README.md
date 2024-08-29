@@ -3,6 +3,8 @@
 This is a template for a PhD thesis with a separate title page.
 This template aims at setting up all the necessary packages and create the base outline of a thesis.
 
+A list of theses using this template (and its earlier versions) is available at the end of the README.
+
 ## How to compile
 To use the template, a LaTeX distribution must be installed on your system.
 When using TexLive, a version more recent that TexLive2019 is required.
@@ -237,3 +239,21 @@ To change the different sections/chapters names that are defined in the template
 - When using `babel` with the `french` option, the label names *must not* contains colon ":".
 
 
+## Theses using the template
+
+This section lists the theses that have been created using this template.
+Note that earlier versions may not include the current styling.
+The theses are sorted in reverse chronological order.
+
+- **Wurtzer, F. (2024).** *Stratégie de couplage physiques/données pour la construction d'un jumeau numérique.*
+- **Bagur, L. (2024).** *Modélisation des effets de l'injection de fluide sur une instabilité sismique en utilisant les méthodes d'éléments de frontière rapides.*
+- **Rostagni, H. (2024).** *Modélisation objective de mécanismes de dissipation non-linéaires : application aux structures en maçonnerie.*
+- **Ribeiro Nogueira, B. (2024).** *Non-local damage mechanics with evolving interactions for modeling quasi-brittle materials : anisotropic damage and gradient-enhanced Eikonal approach.*
+- **Loiseau, F. (2023).** *Formulation of anisotropic damage in quasi-brittle materials and structures based on discrete element simulation.* [https://theses.hal.science/tel-04602381](https://theses.hal.science/tel-04602381)
+- **Ruda, A. (2023).** *Méthode de décomposition de domaine mixte pour la simulation magnétostatique de machines électriques.* [https://theses.hal.science/tel-04576886](https://theses.hal.science/tel-04576886)
+- **Daby-Seesaram, A. (2023).** *Towards an Optimal Multi-query Framework based on Model-order Reduction for Non-linear Dynamics.* [https://theses.hal.science/tel-04555791](https://theses.hal.science/tel-04555791)
+- **Caruel, M. (2023).** *Caractérisation et modélisation thermo-mécanique des alliages à mémoire de forme - application au 26at%Nb-Ti.* [https://theses.hal.science/tel-04636508](https://theses.hal.science/tel-04636508)
+- **Cherrière, T. (2023)** *Élaboration de méthodes et d'outils logiciels pour l'optimisation topologique magnéto-mécanique de machines électriques tournantes.* [https://theses.hal.science/tel-04636530](https://theses.hal.science/tel-04636530)
+
+
+If you have used this template for your thesis, please contact us via the issue tracker (or by mail) to have your work added to this list.

@@ -203,7 +203,7 @@
 
 %%% Bibliography
 % Biblatex
-\RequirePackage[bibstyle=custom-apa,labeldate=year,citestyle=apa,isbn=false,url=false,eprint=false,backref=true,sortcites=false,sorting=nyt,uniquename=false,uniquelist=false,maxcitenames=2]{biblatex}
+\RequirePackage[backend=biber,bibstyle=custom-apa,labeldate=year,citestyle=apa,isbn=false,url=false,eprint=false,backref=true,sortcites=false,sorting=nyt,uniquename=false,uniquelist=false,maxcitenames=2]{biblatex}
 % Increase the line spacing in the bibliography
 \setlength\bibitemsep{1.5\itemsep}
 

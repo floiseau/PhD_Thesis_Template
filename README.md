@@ -245,6 +245,7 @@ This section lists the theses that have been created using this template.
 Note that earlier versions may not include the current styling.
 The theses are sorted in reverse chronological order.
 
+- **Campagna, G. (2025).** *Effect of the mechanical stress on the training of Nb3Sn superconducting magnets.*
 - **Wurtzer, F. (2024).** *Stratégie de couplage physiques/données pour la construction d'un jumeau numérique.*
 - **Bagur, L. (2024).** *Modélisation des effets de l'injection de fluide sur une instabilité sismique en utilisant les méthodes d'éléments de frontière rapides.*
 - **Rostagni, H. (2024).** *Modélisation objective de mécanismes de dissipation non-linéaires : application aux structures en maçonnerie.*

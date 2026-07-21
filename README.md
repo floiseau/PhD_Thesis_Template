@@ -239,7 +239,7 @@ To change the different sections/chapters names that are defined in the template
 - When using `babel` with the `french` option, the label names *must not* contains colon ":".
 
 
-## Theses using the template
+## PhD Thesis using the template
 
 This section lists the theses that have been created using this template.
 Note that earlier versions may not include the current styling.
